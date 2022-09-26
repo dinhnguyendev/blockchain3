@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    <!-- import socket.io -->
+    <script src="socket.io/socket.io.js"></script>
+    <script src="./socket.js"></script>
+    <style>
+        
+        .flex{
+            display: flex;
+            min-height: 300px;
+            background-color: aqua;
+        }
+
+        #left{
+        flex: 1;
+      
+       
+        }
+        #right{
+            flex: 2;
+        }
+        .boxContent{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #listMessages{
+            padding: 50px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="loginForm">
+            <h3>your name ?</h3>
+            <input type="text" id="txtUsername">
+            <input type="button" value="Register" id="btnRegister">
+        </div>
+        <div id="chatForm">
+            <div class="flex">
+                <div id="left">
+                    <div class="boxTitle">user online...</div>
+                    <div id="boxContent"></div>
+                </div>
+                <div id="right">
+                    <div id="sayHi">
+                        hello <div id="currentUser">Teo</div>
+                        <input type="button" id="btnLogout" value="Logout"/>
+                    </div>
+                    <div id="listMessages">
+                        
+                    </div>
+                    <div id="thongbao"></div>
+                    <input type="text" id='txtMessege'/>
+                    <input type="button" id='btnSendMessage' value="Send"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
